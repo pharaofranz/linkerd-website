@@ -1,6 +1,8 @@
-bases:
-  - ../base
 
 patches:
-  - podinfo.yml
-  - frontend.yml
+- path: ./podinfo.yml
+- path: ./frontend.yml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../base
